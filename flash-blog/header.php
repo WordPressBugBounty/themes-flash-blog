@@ -50,7 +50,11 @@
     <?php } ?>
     <?php if (flash_blog_get_option('enable_cursor_option') == 1){ ?>
         <div class="theme-custom-cursor theme-cursor-primary"></div>
-        <div class="theme-custom-cursor theme-cursor-secondary"></div>
+        <div class="theme-custom-cursor theme-cursor-secondary">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.06055 0H20.0605V18H17.0605V5.12155L2.12132 20.0608L0 17.9395L14.9395 3H2.06055V0Z"/>
+            </svg>
+        </div>
     <?php } ?>
 <div id="page" class="site <?php if (flash_blog_get_option('enable_featured_page_section') == 1) {
     echo "content-block";
@@ -104,10 +108,10 @@ $flash_blog_header_img = get_header_image(); ?>
                     </div>
                     <div class="united-navigation">
                         <nav id="site-navigation" class="main-navigation">
-                            <span class="toggle-menu" aria-controls="primary-menu" aria-expanded="false">
+                            <button class="toggle-menu" aria-controls="primary-menu" aria-expanded="false">
                                 <span class="screen-reader-text"><?php esc_html_e('Primary Menu', 'flash-blog'); ?></span>
-                                <i class="toogle-icon"></i>
-                            </span>
+                                <i class="united-toggle-icon"></i>
+                            </button>
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'mainnav',

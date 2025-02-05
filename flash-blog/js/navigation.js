@@ -25,7 +25,7 @@
 						ethis.slideDown('300');
 						e(".united-navigation").addClass('mmenu-active');
 					}
-					e('.toogle-icon').toggleClass('toogle-icon-close');
+					e('.united-toggle-icon').toggleClass('united-toggle-icon-close');
 				});
 				e('.united-navigation .main-navigation ').on('click', '.menu-mobile a i', function (event) {
 					event.preventDefault();

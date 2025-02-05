@@ -2,20 +2,40 @@ window.addEventListener("load", function () {
     jQuery(document).ready(function ($) {
         "use strict";
         $("body").addClass("page-loaded");
-        var myCursor = jQuery('.theme-custom-cursor');
+        var myCursor = $('.theme-custom-cursor');
         if (myCursor.length) {
             if ($('body')) {
                 const e = document.querySelector('.theme-cursor-secondary'),
                     t = document.querySelector('.theme-cursor-primary');
                 let n, i = 0,
                     o = !1;
-                window.onmousemove = function (s) {
-                    o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-                }, $('body').on("mouseenter", "a, button, input[type=\"submit\"], .slick-arrow, .cursor-pointer", function () {
-                    e.classList.add('cursor-hover'), t.classList.add('cursor-hover')
-                }), $('body').on("mouseleave", "a, button, input[type=\"submit\"], .slick-arrow, .cursor-pointer", function () {
-                    $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove('cursor-hover'), t.classList.remove('cursor-hover'))
-                }), e.style.visibility = "visible", t.style.visibility = "visible"
+                $(window).on("mousemove", function (s) {
+                    o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+                        e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)",
+                        n = s.clientY, i = s.clientX;
+                });
+                $('body').on("mouseenter", "a, button, input[type=\"submit\"], .slick-arrow, .cursor-pointer", function () {
+                    e.classList.add('cursor-hover');
+                    t.classList.add('cursor-hover');
+                });
+                $('body').on("mouseleave", "a, button, input[type=\"submit\"], .slick-arrow, .cursor-pointer", function () {
+                    if (!$(this).is("a") || !$(this).closest(".cursor-pointer").length) {
+                        e.classList.remove('cursor-hover');
+                        t.classList.remove('cursor-hover');
+                    }
+                });
+                $('body').on("mouseenter", "img", function () {
+                    if ($(this).closest("a").length) {
+                        $(e).find("path").css("fill", "#fff");
+                    }
+                });
+                $('body').on("mouseleave", "img", function () {
+                    if ($(this).closest("a").length) {
+                        $(e).find("path").css("fill", "");
+                    }
+                });
+                e.style.visibility = "visible";
+                t.style.visibility = "visible";
             }
         }
     });

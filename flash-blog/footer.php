@@ -78,7 +78,7 @@ if ((is_front_page() || is_home()) && !is_paged() ) {
                         }
                         ?>
                         <span class="sep"> | </span>
-                        <?php printf(esc_html__('Theme: %1$s by %2$s.', 'flash-blog'), 'Flash Blog', '<a href="http://unitedtheme.com/">Unitedtheme</a>');
+                        <?php printf(esc_html__('Theme: %1$s by %2$s.', 'flash-blog'), 'Flash Blog', '<a href="https://unitedtheme.com">Unitedtheme</a>');
                         ?>
                     </div>
                 </div>

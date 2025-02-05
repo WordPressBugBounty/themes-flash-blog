@@ -75,9 +75,9 @@ if (!function_exists('flash_blog_header_style')) :
                 fill: #<?php echo esc_attr( $header_text_color ); ?>;
             }
 
-            .site-header .toogle-icon,
-            .site-header .toogle-icon:before,
-            .site-header .toogle-icon:after {
+            .site-header .united-toggle-icon,
+            .site-header .united-toggle-icon:before,
+            .site-header .united-toggle-icon:after {
                 background-color:  #<?php echo esc_attr( $header_text_color ); ?>;
             }
 

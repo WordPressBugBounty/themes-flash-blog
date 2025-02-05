@@ -8,7 +8,7 @@ Description: Flash Blog is a modern, clean, and responsive WordPress theme creat
 Requires at least: 5.3
 Tested up to: 6.7
 Requires PHP: 5.5
-Version: 1.3.1
+Version: 1.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: flash-blog
@@ -616,6 +616,7 @@ table {
     width: 6px;
     height: 6px;
     z-index: 10000001;
+    text-align: center;
     background-color: #CED0D4;
     -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
     -o-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
@@ -626,8 +627,9 @@ table {
     margin-top: -30px;
     width: 60px;
     height: 60px;
+    line-height: 60px;
     background-color: #CED0D4;
-    opacity: .3;
+    opacity: .4;
 }
 .theme-cursor-primary {
     margin-left: -30px;
@@ -816,6 +818,7 @@ a:focus-visible {
     position: static;
 }
 .main-navigation .toggle-menu {
+    background: none;
     height: 80px;
     text-align: center;
     cursor: pointer;
@@ -853,10 +856,9 @@ a:focus-visible {
         float: right;
     }
 }
-.toogle-icon {
+.united-toggle-icon {
     width: 20px;
     height: 1px;
-    top: 38px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -867,8 +869,8 @@ a:focus-visible {
     -o-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 }
-.toogle-icon:before,
-.toogle-icon:after {
+.united-toggle-icon:before,
+.united-toggle-icon:after {
     position: absolute;
     content: '';
     width: 100%;
@@ -880,37 +882,37 @@ a:focus-visible {
     -o-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 }
-.toogle-icon:before {
+.united-toggle-icon:before {
     top: -8px;
 }
-.toogle-icon:after {
+.united-toggle-icon:after {
     top: 8px;
 }
-.site .toogle-icon.toogle-icon-close {
+.site .united-toggle-icon.united-toggle-icon-close {
     background-color: transparent !important;
 }
-.toogle-icon.toogle-icon-close:before {
+.united-toggle-icon.united-toggle-icon-close:before {
     -webkit-transform: translateY(8px) rotateZ(-45deg);
     -moz-transform: translateY(8px) rotateZ(-45deg);
     -ms-transform: translateY(8px) rotateZ(-45deg);
     -o-transform: translateY(8px) rotateZ(-45deg);
     transform: translateY(8px) rotateZ(-45deg);
 }
-.toogle-icon.toogle-icon-close:after {
+.united-toggle-icon.united-toggle-icon-close:after {
     -webkit-transform: translateY(-8px) rotateZ(45deg);
     -moz-transform: translateY(-8px) rotateZ(45deg);
     -ms-transform: translateY(-8px) rotateZ(45deg);
     -o-transform: translateY(-8px) rotateZ(45deg);
     transform: translateY(-8px) rotateZ(45deg);
 }
-.dark-scheme .toogle-icon,
-.dark-scheme .toogle-icon:before,
-.dark-scheme .toogle-icon:after {
+.dark-scheme .united-toggle-icon,
+.dark-scheme .united-toggle-icon:before,
+.dark-scheme .united-toggle-icon:after {
     background: #333;
 }
-.light-scheme .toogle-icon,
-.light-scheme .toogle-icon:before,
-.light-scheme .toogle-icon:after {
+.light-scheme .united-toggle-icon,
+.light-scheme .united-toggle-icon:before,
+.light-scheme .united-toggle-icon:after {
     background: #fff;
 }
 .main-navigation .menu ul {
