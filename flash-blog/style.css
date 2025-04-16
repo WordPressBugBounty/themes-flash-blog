@@ -6,9 +6,9 @@ Author: UnitedTheme
 Author URI: https://unitedtheme.com/
 Description: Flash Blog is a modern, clean, and responsive WordPress theme created for professional bloggers and ideal for those aiming to become one. It comes with many options and features that can be added and customized easily, giving you lots of freedom in creating your unique site. Please contact our support if you have a question or if you need help. Thank you!
 Requires at least: 5.3
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.5
-Version: 1.3.3
+Version: 1.3.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: flash-blog
@@ -832,8 +832,7 @@ a:focus-visible {
     text-align: center;
     cursor: pointer;
     font-size: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 15px;
     display: none;
     vertical-align: middle;
 }
@@ -842,7 +841,6 @@ a:focus-visible {
     display: inline-block;
     vertical-align: middle;
     padding: 0;
-    margin: 0 0 0 15px;
 }
 .icon-search svg {
     height: 18px;
@@ -1937,7 +1935,8 @@ body.home .site-content #secondary {
     gap: 30px;
 }
 .site-header-panel .site-branding{
-    min-width:20rem;
+    width: clamp(12.5rem, 7.5rem + 12.5vw, 20rem);
+    flex-shrink: 0;
 }
 .site-title {
     font: 700 2.4em/125% 'Oswald', sans-serif;
