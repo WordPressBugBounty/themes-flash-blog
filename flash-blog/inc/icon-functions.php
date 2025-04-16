@@ -198,6 +198,7 @@ function flash_blog_social_links_icons() {
 		'tumblr.com'      => 'tumblr',
 		'twitch.tv'       => 'twitch',
 		'twitter.com'     => 'twitter',
+		'x.com'           => 'twitter',
 		'vimeo.com'       => 'vimeo',
 		'vine.co'         => 'vine',
 		'vk.com'          => 'vk',
@@ -206,7 +207,8 @@ function flash_blog_social_links_icons() {
 		'yelp.com'        => 'yelp',
 		'youtube.com'     => 'youtube',
         't.me'            => 'telegram',
-        'telegram.me'     => 'telegram',
+         'telegram.me'     => 'telegram',
+        'tiktok.com'     => 'tiktok',
         'wa.me'           => 'whatsapp',
         'whatsapp'           => 'whatsapp',
 	);

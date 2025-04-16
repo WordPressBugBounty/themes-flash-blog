@@ -76,56 +76,54 @@ $flash_blog_header_img = get_header_image(); ?>
     <header id="masthead" class="site-header <?php echo esc_attr($flash_blog_header_img_cl); ?> <?php echo esc_attr($flash_blog_header_colors); ?>" data-background="<?php echo esc_url($flash_blog_header_img); ?>">
         <!-- header -->
         <div class="wrapper">
-            <div class="row">
-                <div class="col col-full">
-                    <div class="site-branding">
-                        <div class="logo">
-                            <?php
-                            the_custom_logo();
-                            if (is_front_page() && is_home()) : ?>
-                                <h1 class="site-title">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                                        <?php bloginfo('name'); ?>
-                                    </a>
-                                </h1>
-                            <?php else : ?>
-                                <p class="site-title">
-                                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                                        <?php bloginfo('name'); ?>
-                                    </a>
-                                </p>
-                            <?php
-                            endif;
+            <div class="site-header-panel">
+                <div class="site-branding">
+                    <div class="logo">
+                        <?php
+                        the_custom_logo();
+                        if (is_front_page() && is_home()) : ?>
+                            <h1 class="site-title">
+                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                                    <?php bloginfo('name'); ?>
+                                </a>
+                            </h1>
+                        <?php else : ?>
+                            <p class="site-title">
+                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                                    <?php bloginfo('name'); ?>
+                                </a>
+                            </p>
+                        <?php
+                        endif;
 
-                            $description = get_bloginfo('description', 'display');
-                            if ($description || is_customize_preview()) : ?>
-                                <p class="site-description">
-                                    <?php echo esc_html($description); ?>
-                                </p>
-                            <?php
-                            endif; ?>
-                        </div>
+                        $description = get_bloginfo('description', 'display');
+                        if ($description || is_customize_preview()) : ?>
+                            <p class="site-description">
+                                <?php echo esc_html($description); ?>
+                            </p>
+                        <?php
+                        endif; ?>
                     </div>
-                    <div class="united-navigation">
-                        <nav id="site-navigation" class="main-navigation">
-                            <button class="toggle-menu" aria-controls="primary-menu" aria-expanded="false">
-                                <span class="screen-reader-text"><?php esc_html_e('Primary Menu', 'flash-blog'); ?></span>
-                                <i class="united-toggle-icon"></i>
-                            </button>
-                            <?php
-                            wp_nav_menu(array(
-                                'theme_location' => 'mainnav',
-                                'menu_id' => 'primary-menu',
-                                'container' => 'div',
-                                'container_class' => 'menu'
-                            ));
-                            ?>
+                </div>
+                <div class="united-navigation">
+                    <nav id="site-navigation" class="main-navigation">
+                        <button class="toggle-menu" aria-controls="primary-menu" aria-expanded="false">
+                            <span class="screen-reader-text"><?php esc_html_e('Primary Menu', 'flash-blog'); ?></span>
+                            <i class="united-toggle-icon"></i>
+                        </button>
+                        <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'mainnav',
+                            'menu_id' => 'primary-menu',
+                            'container' => 'div',
+                            'container_class' => 'menu'
+                        ));
+                        ?>
 
-                            <button type="button" class="icon-search" aria-label="search">
-                                <?php echo flash_blog_get_svg( array( 'icon' => 'loupe' ) ); ?>
-                            </button>
-                        </nav>
-                    </div>
+                        <button type="button" class="icon-search" aria-label="search">
+                            <?php echo flash_blog_get_svg( array( 'icon' => 'loupe' ) ); ?>
+                        </button>
+                    </nav>
                 </div>
             </div>
         </div>
