@@ -165,14 +165,14 @@ function flash_blog_fonts_url() {
 	$fonts_url = '';
     $fonts = array();
 
-    $font_1 = 'Source+Sans+Pro:300,300i,400,400i,700,700i';
+    $font_1 = 'Inter:300,300i,400,400i,500,500i,600,600i,700,700i';
     $font_2 = 'Oswald:300,400,500,700';
 
     $font_array = array();
     $font_array[] = $font_1;
     $font_array[] = $font_2;
 
-    $starter_gazette_fonts_stylesheet = '//fonts.googleapis.com/css?family=';
+    $flash_blog_fonts_stylesheet = '//fonts.googleapis.com/css?family=';
 
     $i = 0;
     for ($i = 0; $i < count($font_array); $i++) {
